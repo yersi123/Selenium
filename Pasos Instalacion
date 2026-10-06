@@ -1,0 +1,9 @@
+python -m venv venv                      # Crea el entorno virtual (carpeta "venv") donde se instalan las librerías del proyecto
+.\venv\Scripts\Activate.ps1              # Activa el entorno virtual (debe aparecer (venv) al inicio de la línea)
+pip install -r requirements.txt          # Instala selenium, pytest y behave dentro del entorno
+.\venv\Scripts\Activate.ps1              # Entra al entorno virtual (debe aparecer (venv) al inicio de la línea)
+
+
+python test_online.py                    # Prueba en línea: recorre la compra completa y muestra APROBADO o FALLIDO
+pytest test_junit_pytest.py -v -s        # pytest (JUnit): ejecuta las 4 pruebas con assert
+behave                                   # behave (Cucumber): ejecuta los 3 escenarios de features/compra.feature
